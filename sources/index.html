@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title>Games | AD Awesome Tech</title>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Start Article List -->
+    <main>
+      <div class="container" style="padding-top: 60px;">
+        <!-- Start Breadcrumb-->
+        <nav aria-label="breadcrumb" class="mt-5">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="../">Games</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sources</li>
+          </ol>
+        </nav>
+        <!-- End Breadcrumb -->
+        <div class="row">
+          <h1 class="mt-3 mb-3 display-1">Sources</h1>
+          <form class="form-inline mt-2 my-lg-0">
+            <input id="search" class="form-control mr-sm-2 mb-5" onkeyup="searchFunction()" type="search" placeholder="Search Sources" aria-label="Search">
+          </form>
+        </div>
+        <div id="gamesList">
+          <div class="row">
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/gabrielecirulli/2048/"><h2 class="display-6">2048</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/doublespeakgames/adarkroom/"><h2 class="display-6">A Dark Room</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/dmcinnes/HTML5-Asteroids/"><h2 class="display-6">Asteroids</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/wwwtyro/Astray/"><h2 class="display-6">Astray</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://lichess.org/"><h2 class="display-6">Chess</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/dmcinnes/dead-valley/"><h2 class="display-6">Dead Valley</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/lutzroeder/digger/"><h2 class="display-6">Digger</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi00qm_kpnuAhXabc0KHTrABQ4QFjACegQIAxAC&url=https%3A%2F%2Farchive.org%2Fdetails%2FDoom-2&usg=AOvVaw0DqVJXGnUX_b4gONMx0t1n/"><h2 class="display-6">DooM 2 (Archive)</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/hyspace/flappy/"><h2 class="display-6">Flappy Bird</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/jakesgordon/javascript-gauntlet/"><h2 class="display-6">Gauntlet</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/Hextris/hextris/"><h2 class="display-6">Hextris</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/hughsk/ludum-dare-27/"><h2 class="display-6">Hurry!</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/robertkleffner/mariohtml5/"><h2 class="display-6">Mario</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/daleharvey/pacman/"><h2 class="display-6">Pac Man</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/scottschiller/SURVIVOR/"><h2 class="display-6">SURVIVOR</h2></a>
+          </div>
+          <div class="row">
+            <hr>
+            <a class="link-secondary mb-5" target="_blank" href="https://github.com/jakesgordon/javascript-tetris/"><h2 class="display-6">Tetris</h2></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End Article List-->
+    <script>
+    function searchFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('search');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("gamesList");
+      li = ul.getElementsByTagName('div');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+  </body>
+  <!-- <footer class="footer mt-auto py-3 bg-dark text-center">
+    <div class="container">
+      <span class="text-light">See a mistake or improvement to be made? This website is open-source! View and edit the source on <a class="link-secondary" href="https://github.com/ADawesomeguy/ad-awesome-dot-tech" target="_blank">GitHub</a>. A star couldn't hurt...</span>
+    </div>
+  </footer> -->
+</html>

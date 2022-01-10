@@ -25,6 +25,16 @@
 <body>
   <canvas id="jsdos"></canvas>
   <script>
+    
+    //prevent alt left/right keybinds in chrome from triggering back/forward action in top left
+    window.addEventListener("keydown",(e)=>{
+      const {key, keyCode, metaKey, shiftKey, altKey, ctrlKey} = e; 
+      if(key && altKey){
+        e.preventDefault();
+        console.log("alt prevented");
+      }
+    });
+    
     Dos(document.getElementById("jsdos"), {
       wdosboxUrl: "/wdosbox.js",
       cycles: 750,
